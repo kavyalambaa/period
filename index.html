@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For Rewa 🩷</title>
+<style>
+:root{--bg:#fff0f5;--card:#ffffff;--tx:#4a2036;--ac:#e8456b;--ac2:#ffb3c6;--mu:#9b6479;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1220;--card:#3b1a2e;--tx:#ffe3ec;--ac:#ff6b8f;--ac2:#6b2a47;--mu:#d49ab1;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#2a1220;--card:#3b1a2e;--tx:#ffe3ec;--ac:#ff6b8f;--ac2:#6b2a47;--mu:#d49ab1;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Quicksand","Segoe UI",system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+#fl{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.f{position:absolute;bottom:-60px;animation:up linear infinite;opacity:.8}
+@keyframes up{0%{transform:translateY(0) translateX(0) rotate(0)}50%{transform:translateY(-55vh) translateX(25px) rotate(20deg)}100%{transform:translateY(-115vh) translateX(-15px) rotate(-15deg)}}
+main{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:16px}
+h1{text-align:center;font-size:1.9rem;margin:8px 0 2px;color:var(--ac)}
+.sub{text-align:center;color:var(--mu);margin:0 0 14px}
+nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px}
+nav button{flex:1;white-space:nowrap;border:0;border-radius:999px;padding:10px 14px;background:var(--card);color:var(--tx);font:inherit;font-weight:700;cursor:pointer}
+nav button.on{background:var(--ac);color:#fff}
+.card{background:var(--card);border-radius:20px;padding:18px;margin-top:10px;box-shadow:0 4px 18px rgba(232,69,107,.15)}
+h2{margin:0 0 8px;color:var(--ac);font-size:1.25rem}
+textarea,select{width:100%;border:2px solid var(--ac2);border-radius:14px;padding:10px;font:inherit;background:var(--bg);color:var(--tx)}
+textarea{min-height:90px;resize:vertical}
+.btn{border:0;background:var(--ac);color:#fff;font:inherit;font-weight:700;padding:10px 18px;border-radius:999px;cursor:pointer;margin:8px 6px 0 0}
+.btn.alt{background:var(--ac2);color:var(--tx)}
+.btn:active{transform:scale(.95)}
+.tab{display:none}.tab.on{display:block}
+.item{background:var(--bg);border-radius:14px;padding:10px;margin-top:8px;font-size:.95rem}
+.env{font-size:5rem;text-align:center;cursor:pointer;animation:bob 1.5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(4deg)}}
+#letter{display:none;line-height:1.75;white-space:pre-wrap}
+.grid{display:grid;gap:8px;margin-top:10px}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.cell{aspect-ratio:1;border:0;border-radius:16px;background:var(--bg);font-size:2rem;cursor:pointer;color:var(--tx)}
+.cell.hit{background:var(--ac2)}
+.stat{display:flex;justify-content:space-between;font-weight:700;color:var(--mu)}
+.big{font-size:1.2rem;text-align:center;min-height:3.2em;margin:10px 0}
+</style></head><body>
+<div id="fl"></div>
+<main>
+<h1>For my Rewa 🩷</h1>
+<p class="sub">your cozy corner while I&rsquo;m stuck in class 🌸</p>
+<nav id="nav">
+<button class="on" data-t="c">📝 Complaints</button>
+<button data-t="l">💌 Letter</button>
+<button data-t="g">🎮 Games</button>
+<button data-t="f">🤪 Funny</button>
+</nav>
+
+<section class="tab on" id="c"><div class="card">
+<h2>Complaint Box 📮</h2>
+<p style="margin-top:0;color:var(--mu)">Tell me everything I did wrong (or didn&rsquo;t do). Judge Rewa is listening. 👩‍⚖️</p>
+<select id="ct"><option>I missed you 🥺</option><option>You didn&rsquo;t reply fast 📱</option><option>You were busy again 📚</option><option>You didn&rsquo;t bring chocolate 🍫</option><option>Just because 😤</option></select>
+<textarea id="cx" placeholder="Write your complaint here…" style="margin-top:8px"></textarea>
+<label class="stat" style="margin-top:8px"><span>Anger level</span><span id="lv">3/10</span></label>
+<input type="range" id="an" min="1" max="10" value="3" style="width:100%">
+<button class="btn" id="sub">Submit complaint</button>
+<button class="btn alt" id="cp">Copy all &amp; send to him 📤</button>
+<div id="rep" class="big"></div>
+<div id="lst"></div>
+</div></section>
+
+<section class="tab" id="l"><div class="card">
+<h2>A letter, just for you 💌</h2>
+<div class="env" id="env">💌</div>
+<p style="text-align:center;color:var(--mu)">tap the envelope</p>
+<div id="letter">My dearest Rewa,
+
+I know these days are hard. Your tummy hurts, your back aches, your mood goes up and down, and I can&rsquo;t be next to you with a hot water bottle and your favourite snacks. I hate that more than any class I have to sit through.
+
+But please remember: you are so strong. Every month your body goes through all this and you still smile, still study, still take care of everyone. You are not &ldquo;too emotional&rdquo; or &ldquo;too much&rdquo;. You are exactly enough, and I love every version of you, including the grumpy one, the sleepy one, and the one who wants to eat everything.
+
+Cry if you need to. Eat the chocolate. Wear the comfiest clothes. Sleep. Cancel everything. Be dramatic, I&rsquo;ll still think you are the cutest person alive.
+
+When class ends, I&rsquo;m all yours. Hugs, forehead kisses, and a very long cuddle are already booked for you.
+
+Until then, drink warm water, rest well, and know that I am thinking of you every single minute.
+
+Always yours,
+Your person 🩷</div>
+</div></section>
+
+<section class="tab" id="g">
+<div class="card"><h2>Whack-a-Cramp 😣🔨</h2>
+<div class="stat"><span>Score: <b id="ws">0</b></span><span>Time: <b id="wt">20</b>s</span></div>
+<div class="grid g3" id="wg"></div>
+<button class="btn" id="ws_b">Start</button></div>
+<div class="card"><h2>Memory Match 🧠</h2>
+<div class="stat"><span>Moves: <b id="mm">0</b></span><span id="mw"></span></div>
+<div class="grid g4" id="mg"></div>
+<button class="btn alt" id="mr">Shuffle</button></div>
+</section>
+
+<section class="tab" id="f">
+<div class="card"><h2>Instant Joke Machine 😂</h2><div class="big" id="jk">Press the button!</div><button class="btn" id="jb">Tell me a joke</button></div>
+<div class="card"><h2>Excuse Generator for his crimes 🕵️</h2><div class="big" id="ex">Why was he busy?</div><button class="btn" id="eb">Generate excuse</button></div>
+<div class="card"><h2>Hug Counter 🤗</h2><div class="big">Virtual hugs received: <b id="hc">0</b></div><button class="btn" id="hb">Send me a hug</button></div>
+<div class="card"><h2>Open When… 💝</h2>
+<button class="btn alt" data-o="You feel crampy: drink something warm, lie on your side, and know I&rsquo;m sending a very gentle hug through the screen.">crampy 😣</button>
+<button class="btn alt" data-o="You feel sad for no reason: that&rsquo;s allowed. Hormones are loud, but you are loved louder.">sad 😢</button>
+<button class="btn alt" data-o="You feel angry: shout into a pillow, then text me. I will agree with you about everything. (Even if I&rsquo;m the problem.)">angry 😡</button>
+<button class="btn alt" data-o="You are hungry: you deserve ALL the snacks. This is official boyfriend-approved permission.">hungry 🍫</button>
+<div class="item" id="op" style="display:none"></div></div>
+</section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+// floating drops & hearts
+const fl=$('#fl'),em=['🩸','💧','🩷','🌸','🩸','✨','💗'];
+for(let i=0;i<22;i++){const d=document.createElement('div');d.className='f';d.textContent=pick(em);
+d.style.left=Math.random()*100+'%';d.style.fontSize=(16+Math.random()*26)+'px';
+d.style.animationDuration=(9+Math.random()*12)+'s';d.style.animationDelay=(-Math.random()*20)+'s';fl.appendChild(d)}
+// tabs
+$('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
+document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
+document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x.id===b.dataset.t))};
+// complaints
+let cl=[];try{cl=JSON.parse(localStorage.getItem('rewa_c')||'[]')}catch(e){}
+const save=()=>{try{localStorage.setItem('rewa_c',JSON.stringify(cl))}catch(e){}};
+const replies=['Complaint received. The boyfriend has been sentenced to 10 forehead kisses. 😤','Noted, Your Honour. He is very guilty and very sorry. 🥺','Your complaint has been escalated to the Department of Hugs. 🤗','Case registered. Compensation: chocolate + cuddles. 🍫','He has been informed and is currently crying in class. 😭'];
+function draw(){$('#lst').innerHTML=cl.map(c=>`<div class="item"><b>${c.t}</b> · anger ${c.a}/10<br>${c.x.replace(/</g,'&lt;')}</div>`).join('')}
+$('#an').oninput=e=>$('#lv').textContent=e.target.value+'/10';
+$('#sub').onclick=()=>{const x=$('#cx').value.trim();if(!x){$('#rep').textContent='Write something first, my love 🥺';return}
+cl.unshift({t:$('#ct').value,a:$('#an').value,x});save();$('#cx').value='';$('#rep').textContent=pick(replies);draw()};
+$('#cp').onclick=async()=>{const t='Rewa\u2019s complaints 📮\n\n'+cl.map((c,i)=>`${i+1}. ${c.t} (anger ${c.a}/10): ${c.x}`).join('\n');
+try{if(navigator.share){await navigator.share({text:t})}else{await navigator.clipboard.writeText(t);$('#rep').textContent='Copied! Paste it in a chat and send 💌'}}catch(e){$('#rep').textContent='Select and copy the complaints manually 🥺'}};
+draw();
+// letter
+$('#env').onclick=()=>{$('#env').style.display='none';$('#letter').style.display='block'};
+// whack
+let sc=0,tm=20,ti,mi,cells=[];const wg=$('#wg');
+for(let i=0;i<9;i++){const b=document.createElement('button');b.className='cell';b.onclick=()=>{if(b.textContent==='😣'){b.textContent='💥';b.classList.add('hit');$('#ws').textContent=++sc}};wg.appendChild(b);cells.push(b)}
+$('#ws_b').onclick=()=>{clearInterval(ti);clearInterval(mi);sc=0;tm=20;$('#ws').textContent=0;$('#wt').textContent=20;
+mi=setInterval(()=>{cells.forEach(c=>{c.textContent='';c.classList.remove('hit')});pick(cells).textContent='😣'},700);
+ti=setInterval(()=>{$('#wt').textContent=--tm;if(tm<=0){clearInterval(ti);clearInterval(mi);cells.forEach(c=>c.textContent='');$('#ws_b').textContent='Play again (you smashed '+sc+' cramps! 🏆)'}},1000)};
+// memory
+let first=null,lock=false,mv=0,pairs=0;
+function mem(){const mg=$('#mg');mg.innerHTML='';mv=0;pairs=0;first=null;$('#mm').textContent=0;$('#mw').textContent='';
+const a=['🍫','🧸','🩷','🍦','🌸','🐱','🍕','☕'];const d=[...a,...a].sort(()=>Math.random()-.5);
+d.forEach(v=>{const b=document.createElement('button');b.className='cell';b.textContent='❓';b.onclick=()=>{
+if(lock||b.dataset.d||b===first)return;b.textContent=v;
+if(!first){first=b;return}
+$('#mm').textContent=++mv;
+if(first.textContent===v){b.dataset.d=first.dataset.d=1;b.classList.add('hit');first.classList.add('hit');first=null;if(++pairs===8)$('#mw').textContent='You won! 🎉'}
+else{lock=true;const f=first;first=null;setTimeout(()=>{b.textContent=f.textContent='❓';lock=false},700)}};mg.appendChild(b)})}
+$('#mr').onclick=mem;mem();
+// funny
+const jokes=['Why did the period cross the road? To get to the other cycle. 🚶‍♀️','What do you call a cramp wearing a hat? A cap-ramp. 🧢','My girlfriend says she\u2019s fine. Translation: bring snacks. Immediately. 🍫','Chocolate doesn\u2019t ask silly questions. Chocolate understands. 🍫','Heating pad: 1 · Cramps: 0. Be the heating pad. 🔥','Why is Rewa like Wi-Fi? Everyone wants a strong connection, but she works best when nobody irritates her. 📶'];
+$('#jb').onclick=()=>$('#jk').textContent=pick(jokes);
+const ex=['A teacher asked a question and I panicked for 40 minutes. 😵','My phone was in a bag in the corner of the classroom, guarded by 3 dragons. 🐉','I was practising my apology speech for you. It has 14 chapters. 📖','I was busy missing you very loudly in my head. 🥺','My brain buffered at 99%. It always does when I think about you. 🔄'];
+$('#eb').onclick=()=>$('#ex').textContent=pick(ex);
+let h=0;$('#hb').onclick=()=>{$('#hc').textContent=++h;const s=document.createElement('div');s.className='f';s.textContent=pick(['🤗','🩷','💞']);s.style.left=Math.random()*90+'%';s.style.fontSize='40px';s.style.animationDuration='4s';s.style.bottom='20vh';fl.appendChild(s);setTimeout(()=>s.remove(),4000)};
+document.querySelectorAll('[data-o]').forEach(b=>b.onclick=()=>{const o=$('#op');o.style.display='block';o.innerHTML=b.dataset.o});
+</script></body></html>
